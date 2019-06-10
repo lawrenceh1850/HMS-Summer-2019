@@ -1,0 +1,88 @@
+.g-component{
+	position: relative;
+    width: 100%;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* fix to align block regarding fundation row property margin -10px */
+    /*margin-left: 10px;*/
+    background-color: #fff;
+}
+
+.g-component .g-container{
+	background-color: #fcf6fa;
+	padding: 10px;
+    position: relative;
+}
+
+.g-component .g-container .g-title{
+	padding-left: 0;
+	font-size: 28px;
+	color: #880063;
+	font-family: 'helvetica_lt_std_condbold';
+}
+
+.g-component .g-container .g-more{
+	text-align: right;
+	color: #1e325f;
+	margin: 10px;
+}
+
+.g-component .g-container .g-more a{
+	text-decoration: underline;
+	font-family: "Arial",Helvetica,sans-serif;
+	font-size: 14px;
+}
+
+.g-component .g-container .g-more a::after{
+  	content: ">>";
+}
+
+.g-component .g-container .g-elements{
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.g-component .g-container .g-elements .g-element{
+	padding: 0;
+	margin-bottom: 10px;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+}
+
+.g-component .g-container .g-elements .g-element .g-label{
+	padding: 0;
+	color: #595959;
+	display: inherit;
+	width: 10%;
+	min-width: 85px;
+	vertical-align: top;
+}
+
+.g-component .g-container .g-elements .g-element .g-property{
+	padding: 0;
+	color: #1f3864;
+	display: inherit;
+	width: 70%;
+	vertical-align: top;
+}
+
+.g-component .g-container .g-elements .g-element .g-property.g-no-author{
+	width: 85%;
+	vertical-align: top;
+}
+
+.g-component .g-container .g-elements .g-element .g-author{
+	padding: 0;
+	color: #595959;
+	display: inherit;
+	width: 15%;
+	vertical-align: top;
+}
+
+.g-component .g-container .g-elements .g-element .g-author.g-no-author{
+	width: 0%;
+}

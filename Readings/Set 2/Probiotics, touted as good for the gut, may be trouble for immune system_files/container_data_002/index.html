@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script type="text/javascript">
+    
+      (function() {
+        var relegateNavigation = '';
+        var handleClickTagMessage = function(e) {
+          try {
+            var eventData = JSON.parse(e.data);
+          } catch (err) {
+            return;
+          }
+          if (eventData.isInitClickTag) {
+            if (eventData.clickTags) {
+              for (var i = 0; i < eventData.clickTags.length; i++) {
+                var clkTag = eventData.clickTags[i];
+                window[clkTag.name] = clkTag.url;
+              }
+            } else if (eventData.clickTag) {
+              window.clickTag = eventData.clickTag;
+            }
+            relegateNavigation = eventData.relegateNavigation;
+          }
+        };
+
+        if (open.call) {
+          window.open = function(open) {
+            return function(url, name, features) {
+              if (relegateNavigation === 'parent') {
+                var message = {'clickTag': url, 'isPostClickTag': true};
+                parent.postMessage(JSON.stringify(message), '*');
+              } else {
+                var args = [url, name];
+                if (features) {
+                  args.push(features);
+                }
+                open.apply(window, args);
+              }
+            };
+          }(window.open);
+        }
+
+        if (window.addEventListener) {
+          window.addEventListener(
+              'message', handleClickTagMessage, false);
+        } else {
+          window.attachEvent('onmessage', handleClickTagMessage);
+        }
+      })();
+    
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="ad.size" content="width=728,height=90"> 
+  <title>Imbruvica HCP NCCN 728x90</title>
+     <!-- Double Click -->
+  <link rel="stylesheet" type="text/css" href="index_data/style.css">
+  <script>
+      var clickTag1 = "https://www.imbruvicahcp.com/cll/nccn-guidelines-relapsed-refractory-cll-patients?utm_source=statnews&utm_medium=website&utm_campaign=nccnhcp";
+      var clickTag2 = "https://imbruvicahcp.com/prescribing-information";
+  </script>
+  
+  <script src="index_data/tweenmax_2.js"></script>
+  <script src="index_data/timelinelite_2.js"></script></head>
+  <body>
+     <main id="bannerContainer">
+      <a onclick="javascript:window.open(window.clickTag1);" class="splash">
+        <img src="index_data/logo-color.svg" alt="" class="logo" width="120" height="55">
+        <img src="index_data/text1.svg" alt="" class="text-1 text" id="text1" style="opacity: 1; top: 0px;" width="488" height="90">
+        <img src="index_data/text2.svg" alt="" class="text-2 text" id="text2" width="456" height="90">
+        <img src="index_data/text3.svg" alt="" class="text-3 text" id="text3" width="484" height="90">
+        <img src="index_data/button.svg" alt="" class="button text" id="button" width="505" height="90">
+      </a>
+      <div>
+        <div id="wrapper">
+          <div id="scroller">
+            <div id="isi-content" class="isi-content"> 
+              <h1 class="isi-header">Important Safety Information</h1>
+              <h2>WARNINGS AND PRECAUTIONS</h2>
+              <p><strong>Hemorrhage:</strong> Fatal bleeding events have occurred in patients treated with IMBRUVICA<sup>®</sup>.
+ Grade 3 or higher bleeding events (intracranial hemorrhage [including 
+subdural hematoma], gastrointestinal bleeding, hematuria, and post 
+procedural hemorrhage) have occurred in 3% of patients, with fatalities 
+occurring in 0.3% of 1,124 patients exposed to IMBRUVICA<sup>®</sup> in 
+clinical trials. Bleeding events of any grade, including bruising and 
+petechiae, occurred in 44% of patients treated with IMBRUVICA<sup>®</sup>.</p>
+              <p>The mechanism for the bleeding events is not well understood.</p>
+              <p>IMBRUVICA<sup>®</sup> may increase the risk of 
+hemorrhage in patients receiving antiplatelet or anticoagulant therapies
+ and patients should be monitored for signs of bleeding.</p>
+              <p>Consider the benefit-risk of withholding IMBRUVICA<sup>®</sup> for at least 3 to 7 days pre- and post-surgery depending upon the type of surgery and the risk of bleeding.</p>
+              <p><strong>Infections:</strong> Fatal and non-fatal infections (including bacterial, viral, or fungal) have occurred with IMBRUVICA<sup>®</sup> therapy. Grade 3 or greater infections occurred in 24% of 1,124 patients exposed to IMBRUVICA<sup>®</sup> in clinical trials. Cases of progressive multifocal leukoencephalopathy (PML) and <em>Pneumocystis jirovecii</em> pneumonia (PJP) have occurred in patients treated with IMBRUVICA<sup>®</sup>. Consider prophylaxis according to standard of care in patients who are at increased risk for opportunistic infections.</p>
+              <p>Monitor and evaluate patients for fever and infections and treat appropriately.</p>
+              <p><strong>Cytopenias:</strong> Treatment-emergent Grade 3
+ or 4 cytopenias including neutropenia (23%), thrombocytopenia (8%), and
+ anemia (3%) based on laboratory measurements occurred in patients with 
+B-cell malignancies treated with single agent IMBRUVICA<sup>®</sup>.</p>
+              <p>Monitor complete blood counts monthly.</p>
+              <p><strong>Cardiac Arrhythmias:</strong> Fatal and serious cardiac arrhythmias have occurred with IMBRUVICA<sup>®</sup>
+ therapy. Grade 3 or greater ventricular tachyarrhythmias occurred in 
+0.2% of patients, and Grade 3 or greater atrial fibrillation and atrial 
+flutter occurred in 4% of 1,124 patients exposed to IMBRUVICA<sup>®</sup>
+ in clinical trials. These events have occurred particularly in patients
+ with cardiac risk factors, hypertension, acute infections, and a 
+previous history of cardiac arrhythmias.</p>
+              <p>Periodically monitor patients clinically for cardiac 
+arrhythmias. Obtain an ECG for patients who develop arrhythmic symptoms 
+(e.g., palpitations, lightheadedness, syncope, chest pain) or new onset 
+dyspnea. Manage cardiac arrhythmias appropriately, and if it persists, 
+consider the risks and benefits of IMBRUVICA<sup>®</sup> treatment and follow dose modification guidelines.</p>
+              <p><strong>Hypertension:</strong> Hypertension of any grade occurred in 12% of 1,124 patients treated with IMBRUVICA<sup>®</sup>
+ in clinical trials. Grade 3 or greater hypertension occurred in 5% of 
+patients with a median time to onset of 5.9 months (range, 0.03 to 24 
+months).</p>
+              <p>Monitor blood pressure in patients treated with IMBRUVICA<sup>®</sup> and initiate or adjust anti-hypertensive medication throughout treatment with IMBRUVICA<sup>®</sup> as appropriate.</p>
+              <p><strong>Second Primary Malignancies:</strong> Other malignancies (10%) including non-skin carcinomas (4%) have occurred in 1,124 patients treated with IMBRUVICA<sup>®</sup> in clinical trials. The most frequent second primary malignancy was non-melanoma skin cancer (6%).</p>
+              <p><strong>Tumor Lysis Syndrome:</strong> Tumor lysis syndrome has been infrequently reported with IMBRUVICA<sup>®</sup> therapy. Assess the baseline risk (e.g., high tumor burden) and take appropriate precautions.</p>
+              <p>Monitor patients closely and treat as appropriate.</p>
+              <p><strong>Embryo-Fetal Toxicity:</strong> Based on findings in animals, IMBRUVICA<sup>®</sup> can cause fetal harm when administered to a pregnant woman. Advise women to avoid becoming pregnant while taking IMBRUVICA<sup>®</sup>
+ and for 1 month after cessation of therapy. If this drug is used during
+ pregnancy or if the patient becomes pregnant while taking this drug, 
+the patient should be apprised of the potential hazard to a fetus. 
+Advise men to avoid fathering a child during the same time period.</p>
+              <h2>ADVERSE REACTIONS</h2>
+              <p>The most common adverse reactions (≥20%) in patients 
+with B-cell malignancies (MCL, CLL/SLL, WM and MZL) were 
+thrombocytopenia (58%)‡, diarrhea (41%), anemia (38%)‡, neutropenia 
+(35%)‡, musculoskeletal pain (32%), rash (32%), bruising (31%), nausea 
+(26%), fatigue (26%), hemorrhage (24%), and pyrexia (20%).</p>
+              <p>The most common Grade 3 or 4 adverse reactions (≥5%) in
+ patients with B-cell malignancies (MCL, CLL/SLL, WM and MZL) were 
+neutropenia (18%)‡, thrombocytopenia (16%), and pneumonia (14%).</p>
+              <p>Approximately 7% of patients discontinued IMBRUVICA<sup>®</sup>
+ due to adverse reactions. Adverse reactions leading to discontinuation 
+included pneumonia (1.1%), hemorrhage (1%), atrial fibrillation (0.9%), 
+rash (0.7%), diarrhea (0.6%), neutropenia (0.5%), sepsis (0.4%), 
+thrombocytopenia (0.4%), interstitial lung disease (0.3%), and bruising 
+(0.2%). Nine percent of patients had a dose reduction due to adverse 
+reactions.</p>
+              <p class="small">‡Treatment-emergent decreases (all grades) were based on laboratory measurements.</p>
+              <h2>DRUG INTERACTIONS</h2>
+              <p><strong>CYP3A Inhibitors: </strong>Modify IMBRUVICA<sup>®</sup> dose as described in USPI sections 2.4 and 7.1.</p>
+              <p><strong>CYP3A Inducers: </strong>Avoid coadministration with strong CYP3A inducers.</p>
+              <h2>SPECIFIC POPULATIONS</h2>
+              <p><strong>Hepatic Impairment</strong> (based on Child-Pugh criteria): Avoid use of IMBRUVICA<sup>®</sup> in patients with severe baseline hepatic impairment. In patients with mild or moderate impairment, reduce IMBRUVICA<sup>®</sup> dose.</p>
+              <h2>INDICATIONS</h2>
+              <p>IMBRUVICA<sup>®</sup> (ibrutinib) is a kinase inhibitor indicated for the treatment of adult patients with:</p>
+              <ul>
+                <li><p>Chronic lymphocytic leukemia (CLL)/Small lymphocytic lymphoma (SLL)</p>
+                </li>
+                <li><p>CLL/SLL with 17p deletion</p></li>
+              </ul>
+        
+              <p><strong>Please <a onclick="javascript:window.open(window.clickTag2)" id="PI">click here</a>  to see full Prescribing Information.</strong></p>
+        
+              <p>CLL=chronic lymphocytic leukemia, SLL=small lymphocytic lymphoma.</p> 
+        
+              <p>†<strong>Preferred intervention:</strong> Interventions that are based on superior efficacy, safety, and evidence; and, when appropriate affordability.</p>
+        
+              <p>Referenced with permission from the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines<sup>®</sup>)
+ for Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma V.4.2019. ©
+ National Comprehensive Cancer Network, Inc. 2019. All rights reserved. 
+Accessed March 15, 2019. To view the most recent and complete version of
+ the guideline, go online to NCCN.org. NCCN makes no warranties of any 
+kind whatsoever regarding their content, use or application and 
+disclaims any responsibility for their application or use in any way.</p>
+              
+              <img class="isi-logos" src="index_data/isi-logos.png" width="125" height="57"> 
+        
+              <p>© Pharmacyclics LLC 2019<br> © Janssen Biotech, Inc. 2019<br>05/19 PRC-05298</p>
+            </div><!-- .isi-content -->
+          </div><!-- #scroller -->
+        </div><!-- #wrapper -->      </div>
+    </main>
+    <script src="index_data/animation.js"></script>  
+</body></html>
