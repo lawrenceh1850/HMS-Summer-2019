@@ -1,4 +1,5 @@
 ## Harvard Tech spinout
+
 ---
 
 ### [Novel personalized gene therapy](https://www.sciencemag.org/news/2018/10/tailormade-drug-developed-record-time-may-save-girl-fatal-brain-disease)
@@ -8,7 +9,7 @@
 - sequenced genome to find cause of rare disease and then inserted RNA sequence that targeted the mutated mRNA sequence (antisense therapy)
 - [paper here](https://eventpilot.us/web/page.php?page=IntHtml&project=ASHG18&id=180124037)
 
-### [One spinout from lab $800M Series A - Personalized gene therapy startup out of Harvard](https://otd.harvard.edu/news/harvard-researchers-immune-silent-stem-cell-technology-licensed-to-sana-bio)
+### [One spinout from lab \$800M Series A - Personalized gene therapy startup out of Harvard](https://otd.harvard.edu/news/harvard-researchers-immune-silent-stem-cell-technology-licensed-to-sana-bio)
 
 - licensing agreement with Harvard Office of Technology Development
 - `producing hypoimmunogenic stem cells that can be differentiated into any cell type and then transplanted into a patient without triggering immune rejection`
@@ -18,11 +19,11 @@
 
 ### [Other spinout from lab Sherlock Biosciences licenses Wyss technology to create affordable molecular diagnostics](https://otd.harvard.edu/news/sherlock-biosciences-licenses-wyss-technology-to-create-affordable-molecula)
 
--  Wyss Institute for Biologically Inspired Engineering tech - create a highly sensitive, nucleic acid-based diagnostic platform
--  don't need other lab equipment, operates at room temperature
--  INSPECTR tech - `DNA hybridization-based sensor that can be easily programmed to detect target nucleic acids (DNA or RNA) with single base pair specificity, coupled with a paper-based synthetic gene network that translates the sensor’s detection into a bioluminescent signal that is easily visualized or captured on instant film`
--  SHERLOCK - `CRISPR-based diagnostic tool that can detect genetic “fingerprints” across multiple organisms or sample types down to the single-digit attomolar scale, which could indicate the presence of a single molecule of DNA or RNA in a sample`
--  create portable, programmable tests for a variety of medical/environmental conditions
+- Wyss Institute for Biologically Inspired Engineering tech - create a highly sensitive, nucleic acid-based diagnostic platform
+- don't need other lab equipment, operates at room temperature
+- INSPECTR tech - `DNA hybridization-based sensor that can be easily programmed to detect target nucleic acids (DNA or RNA) with single base pair specificity, coupled with a paper-based synthetic gene network that translates the sensor’s detection into a bioluminescent signal that is easily visualized or captured on instant film`
+- SHERLOCK - `CRISPR-based diagnostic tool that can detect genetic “fingerprints” across multiple organisms or sample types down to the single-digit attomolar scale, which could indicate the presence of a single molecule of DNA or RNA in a sample`
+- create portable, programmable tests for a variety of medical/environmental conditions
 
 ### Entities
 
@@ -33,19 +34,21 @@
 - [Open Philanthropy Project - give out grants](https://www.openphilanthropy.org/)
 
 ## Project specific info
+
 ---
 
-- goal to collect enough info to demonstrate that an immunotherapy-based method for a subset of human brain lesions (write a paper) then write a grant 
+- goal to collect enough info to demonstrate that an immunotherapy-based method for a subset of human brain lesions (write a paper) then write a grant
 - look at potential treatments including targeted antibody-based treatments and immunotherapy
 - task: to collect the necessary info/computation for this grant
 
 ### Ways to treat cancer
+
 - surgery - used for people with one solid, localized lump
   - regular cutting
   - cryosurgery
   - lasers
   - hyperthermia - RF ablation, mostly experimental right now
-  - photodynamic therapy - light-responsive drugs that 
+  - photodynamic therapy - light-responsive drugs that
 - radiation therapy
   - internal vs. external
   - local vs. systemic
@@ -81,34 +84,7 @@
   - local - small area
   - regional - external or perfusion techniques
   - whole body hyperthermia - raise entire body temperature
-- immunotherapy
-  - type of biological therapy because cancer cells can hide from immune system
-  - direct attack type
-    - checkpoint inhibitors - release "brakes" that keep T cells from killing cancer cells, target cancer cell ability to avoid immune system attack
-    - adoptive cell transfer - take out the T cells from the tumor that have been the most responsive to tumor, grow them and then inject back in
-      - **CAR-T???** 
-    - monoclonal antibodies - aka therapeutic antibodies
-      - grown in the lab, designed to attach to specific targets found in the lab
-      - some mark cancer cells so they can be seen by immune system
-      - others do not cause response - **targeted therapy**
-        - small-molecule drugs
-        - monoclonal antibodies
-          - attach to specific targets on cancer cells
-          - some mark for immune system destruction
-          - others carry stop growth - usually cells rely on signals that cause division, cancer cells have these always on, therapies target these proteins
-          - stop angiogenesis - angiogenesis inhibitors
-          - cause self-destruction
-          - others attach and cause the cells to take up cell-killing substances
-          - hormone therapies that prevent the hormones from acting on your specific cells
-        - need a biopsy
-        - cancer cells can become resistant, drugs for targets are hard to develop
-    - treatment vaccines - boost immune response to cancer cells, different from preventative vaccines
-  - immune system stimulation
-    - cytokines - proteins that modulate normal/anti-cancer immune response, **interferons/interleukins**
-    - BCG - Bacillus Calmette-Guerin, for bladder cancer, weakened tuberculosis bacteria, inserted into bladder and causes immune response against cancer cells, being studied for other types of cancer
-  - not as common, still being studied
-  - some are given as cycles
-  - oral, IV, topical, intravesical (directly into bladder)
+- immunotherapy - see specific note file on this
 - laser
   - usually used for superficial cancers (body surface or lining of internal organs)
   - relieve symptoms (decrease tumor size, get rid of polyps), seal nerve endings
@@ -117,10 +93,21 @@
     - photodynamic therapy - photosensitizer activated by laser, makes skin/eyes sensitive
   - more precise than scalpels, do less damage, shorter ops/recovery, less infection risk
   - may not be as effective
-- precision medicine
+- precision medicine - (drugs that target specific mutations that you have are known as targeted therapy, but targeted therapy is a big part of precision medicine)
   - target the specific mutations that you have
   - pace of research in this field has sped up in recent years
-  - targeted therapies
+  - two main types
+    - small-molecule drugs
+    - monoclonal antibodies
+      - attach to specific targets on cancer cells
+      - some mark for immune system destruction
+      - others carry stop growth - usually cells rely on signals that cause division, cancer cells have these always on, therapies target these proteins
+      - stop angiogenesis - angiogenesis inhibitors
+      - cause self-destruction
+      - others attach and cause the cells to take up cell-killing substances
+      - hormone therapies that prevent the hormones from acting on your specific cells
+    - need a biopsy
+    - cancer cells can become resistant, drugs for targets are hard to develop
   - currently only available for people who have a specific genetic mutation
   - need a biopsy, get DNA sequencing done
   - find mutations, put in shared databases, develop drugs that can target a specific mutation
@@ -141,7 +128,7 @@
 - usuallly removable and do not reoccur
 - unknown risk factors
 - life-threatening due to brain tissue compression - "benign" misleading
-- types 
+- types
   - meningioma - membranes covering brain/spinal cord
   - schwannoma aka acoustic neuroma - Schwann cells
   - pituitary adenomas - pituitary gland
@@ -158,9 +145,10 @@
   - 70% survival for children for all brain tumors
   - long-term side effects common
   - survival rate decreases with age
-  - ***not a lot of data on survival rates for benign tumors**
+  - **\*not a lot of data on survival rates for benign tumors**
 
 ### Adult CNS Treatment
+
 - brain tumors ~90% of primary CNS tumors
 - incidence
   - US - new cases ~24k in 2019, deaths ~18K in 2019
@@ -191,7 +179,9 @@
   - supportive therapy
 
 ## Notes that stick out
+
 ---
+
 - [not a lot of data on benign tumor survival rate](file:///home/lhuang21/Documents/Misc/Harvard/Readings/Benign%20Brain%20Tumor%20Symptoms,%20Signs%20&%20Types.htm)
 - seizures can start happening months to years before diagnosis of a slow growing brain tumor
 - other conditions can have similar presentations as brain tumors abscesses, arteriovenous malformations, and infarctions
@@ -226,8 +216,8 @@
 - [metaplasia](https://en.wikipedia.org/wiki/Metaplasia) - mature cell types differentiate into other cell types
   - there are some normal forms
   - indicate irritant, can progress into dysplasia
-- [dysplasia](https://en.wikipedia.org/wiki/Dysplasia) - immature cell types expand, earliest sign of cancer recognizable 
-- [carcinoma in situ](https://en.wikipedia.org/wiki/Carcinoma_in_situ) - 
+- [dysplasia](https://en.wikipedia.org/wiki/Dysplasia) - immature cell types expand, earliest sign of cancer recognizable
+- [carcinoma in situ](https://en.wikipedia.org/wiki/Carcinoma_in_situ) -
 - neoplasm - abnormal growth of cells
 - tumor = neoplasm that looks swollen
   - some neoplasms do not form tumors e.g. most forms of CIS and leukemia
@@ -238,7 +228,7 @@
 - ROS/RNS - reactive oxygen/nitrogen species
   - oxidative/nitrosative stress
 - [WHO grading of CNS tumors](https://radiopaedia.org/articles/who-grading-of-cns-tumours?lang=us)
-- IDH mutation - isocitrate dehydrogenase 
+- IDH mutation - isocitrate dehydrogenase
   - IDH-wild-type = IDH negative = no mutation = poor prognosis
   - IDH-mutant = IDH positive = mutation present = better prognosis
 - 1p19q co-deletion - deletion of certain arms of chromosomes that is associated with certain tumor types
@@ -250,8 +240,14 @@
 - risk ratio (RR) - ratio of probability of an outcome in the exposed group to the probability of an outcome in an unexposed group
 - risk difference (RD) - absolute difference in the risk between exposed/unexposed group
 - odds ratio (OR) - odds of B in the **presence** of A divided by the odds of B in the **absence** of A, RR usually more meaningful, but this is easier to calculate than RR
+- [relative survival rate](https://www.cancer.org/cancer/non-hodgkin-lymphoma/detection-diagnosis-staging/factors-prognosis.html) - compares people with a certain condition relative to people in the overall population
+  - `if the 5-year relative survival rate for a specific stage of NHL is 70%, it means that people who have that cancer are, on average, about 70% as likely as people who don’t have that cancer to live for at least 5 years after being diagnosed`
+- corticosteroids - reduce inflammation
+- body surface area (BSA) - metric used for cancer drug dosing
+- complete remission - `The disappearance of all signs of cancer in response to treatment. This does not always mean the cancer has been cured. Also called complete response.`
 
 ## To define
+
 - single-photon emission computed tomography (SPECT)
-- positron emission tomography (PET) 
+- positron emission tomography (PET)
 - inflitrative capacity
