@@ -1,0 +1,26 @@
+# Side Effects
+
+- some normal cells can be damaged by immunotherapy
+- when normal cells are damaged, self-antigens are released and antigen presenting cells take them up
+- rash/fatigue common
+- may be treated by IV corticosteroids/immunosuppressive drugs, stop treatment early - evidence suggests that this will not affect cancer response
+- **the reason the new inhibitors are more effective is because the T-cells are for the most part sitting around the cancer cells already - they can't just attack any random cells, compare with the old cytokine treatments**
+  - cancers that don't have as much of an immune response (most common form of breast cancer) - haven't responded as well to this treatment
+- papers on this
+  - [paper on impacts of immunotherapy for cancer on rheumatology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5127444/)
+    - certain rates of conditions present 1-15% with much higher for certain combinations with peptide vaccines
+    - 3% of people died in a certain experiment - EDIT: this was actually an observational study of patients with preexisting autoimmune disorders
+  - [paper from 2017 on immune-related adverse events (IRAEs), general management](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5661371/)
+    - `IRAEs occur in up to 90% of patients treated with anti-CTLA4 and in 70% of those receiving anti-PD1/PD-L1 antibodies`
+  - [Patient selection criteria and toxicities associated with checkpoint inhibitor immunotherapy](https://www.uptodate.com/contents/patient-selection-criteria-and-toxicities-associated-with-checkpoint-inhibitor-immunotherapy)
+  - [Management of toxicities from immunotherapy: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up ](https://www.esmo.org/Guidelines/Supportive-and-Palliative-Care/Management-of-Toxicities-from-Immunotherapy)
+  - [Adverse Events Following Cancer Immunotherapy: Obstacles and Opportunities 2019](https://www.sciencedirect.com/science/article/pii/S1471490619300766?via%3Dihub)
+    - `Patients with pre-existing autoimmune diseases have largely been excluded from cancer immunotherapy trials to date, but they are not excluded from treatment by approved checkpoint inhibitors based on the product labels`
+    - PD-1 pathway inhibitors show a range of response rates depending on the cancer type; from high (53–87%, e.g., MSI<sup>hi</sup> cancers, Merkel cell carcinoma, and Hodgkin's lymphoma), intermediate (15–40% e.g. skin melanoma, NSCLC, RCC, and head and neck cancers), and low (<15%, pancreatic, prostate, and ovarian carcinoma, triple negative breast cancer, and microsatellite stable colorectal cancer
+    - `In general, irAEs in cancer patients are more common with anti-CTLA-4 (60–85%) than anti-PD-1 (16–37%), or anti-PD-L1 (12–24%) at standard doses of these drugs`
+    - `Although experience with combined use of anti-CTLA-4 and anti-PD-1 or anti-PD-L1 is limited mainly to melanoma patients, the frequency and severity of irAEs appear greater in combination-treated patients than in patients treated with single agents; indeed, up to 60% of patients on anti-PD-1 plus anti-CTLA-4 therapy can develop severe irAEs (including inflammation in the nervous system and heart)`
+    - `Additional studies in a different cohort of melanoma patients receiving the ipilimumab plus nivolumab combination reported that the frequency of events that require emergency room visits and hospitalization may be even higher than previous reports (approximately 91% of patients in [32] compared to 60% of patients developing severe irAEs in [31]`
+  - [death rates from checkpoint inhibitors study](https://www.ajmc.com/focus-of-the-week/study-discerns-rare-risks-of-fatal-side-effects-from-cancer-immunotherapy)
+    - `Most patients had a single toxic effect causing death, although combination therapy had multiple concurrent irAEs present more often than either monotherapy (27% for combination vs 14% for ipilimumab and 15% for anti-PD-1/PD-L1; P = .01)`
+    - `The type of fatal event differed between regimens, the study found. Ipilimumab monotherapy was highly dominated by colitis/diarrhea, followed to a lesser extent by hepatitis and pneumonitis. Anti–PD-1/PD-L1 monotherapy had a wide range of toxic effects.`
+  -

@@ -1,9 +1,48 @@
 - immunotherapy
 
-  - type of biological therapy because cancer cells can hide from immune system
-  - direct attack type
+  - [background](https://www.youtube.com/watch?v=BU-V-2qSOjM)
+    - heterogeneity between mutation profiles of individuals with the same disease
+    - different types of mutated cell populations within the same individual
+    - adjuvant - something that kickstarts the immune system, cytokines/TLR agonists/STING ligands
+  - [types](https://www.esmo.org/content/download/124130/2352601/file/ESMO-Patient-Guide-on-Immunotherapy-Side-Effects.pdf)
+    - passive - boost ex isting immune response, more successful so far, ex. checkpoint inhibitors
+    - active - direct immune cell attack, ex. anti-cancer vaccines
+  - results
+    - responses to immunotherapy in trials have been moderate percentage but long-term, chemo has high percentage response but short term
+  - theory
+    - tumors have protein coding changes from mutations (**tumor neoantigens - only present on the cancer cells and not normal cells**)
+    - tumors also have shared, overexpressed self-antigens that have been historic targets - but these are also expressed on regular cells
+    - driver mutation (DNA) leads to neoantigens (proteins)
+      - occurs because there are a ton of mutations in cancerous cells
+    - immune system can adapt as the cancer adapts
+  - future work
 
-    - checkpoint inhibitors - release "brakes" that keep T cells from killing cancer cells, target cancer cell ability to avoid immune system attack
+    - - **need more work to understand biomarkers that identify patients who will respond well to immunotherapy**
+    - combined therapies
+      - inhibitor + other inhibitors
+      - inhibitor + immune boost
+      - inhibitor + radiation
+      - etc.
+    - cancer genome sequencing
+      - which oncogenes are drug targets
+      - neoantigens (protein mutations) that can be targets
+    - tummor immunoevasion score
+      - which immune evasion pathways are present in a tumor
+
+  - attack the tumor
+
+    - checkpoint inhibitors
+      - immune therapy uses receptor proteins on T cells - activate/inhibit them at certain checkpoints
+        - if there weren't checkpoints then the T cells would kill healthy cells
+      - release "brakes" that keep T cells from killing cancer cells
+      - target cancer cell ability to avoid immune system attack
+      - PD-1 and CTLA-4 receptors
+        - expressed on T cells/others
+        - when ligands interact with these receptors, T cells are inhibited
+        - cancer cells can secrete these inhibitors
+        - tumor cell expresses PD-L1 (ligand that interacts with PD-1) that blocks the T cell
+      - Ipilimumab (Yervoy) CTLA-4 drug - FDA approved for malignant melanoma
+      - antibody drug that blocks either PD-1 or PD-L1
     - adoptive cell transfer - take out the T cells from the tumor that have been the most responsive to tumor, grow them and then inject back in
 
       - TIL's (tumor infiltrating lymphocytes) - penetrate tumor environment
@@ -37,11 +76,38 @@
       - grown in the lab, designed to attach to specific targets found in the lab
       - some mark cancer cells so they can be seen by immune system
       - others do not cause response - considered **targeted therapy** rather than immunotherapy
-    - treatment vaccines - boost immune response to cancer cells, different from preventative vaccines
+    - [treatment vaccines](https://www.nature.com/articles/d41586-017-08706-3) - boost immune response to cancer cells, different from preventative vaccines
+      - ex. inject personalized neoantigens based on the genomes of the cancerous cells - personalized medicine
+      - different delivery methods
+        - conventional - make the neoantigen peptides, inject it directly
+        - dendritic cell delivery - take precursors of these cells, which are APC's and then inject them
+      - not all neoantigens prompt an immune response, easier to target high mutation cancers
+        - algorithms to predict which neoantigens are needed
+    - virus treatment
+      - [Duke poliovirus for glioblastoma](https://neurosurgery.duke.edu/blog/duke-study-poliovirus-therapy-recurrent-glioblastoma-has-3-year-survival-rate-21)
+        - [gene that is overactive in glioblastomas](https://en.wikipedia.org/wiki/BCL2L12)
+        - FDA "breakthrough status" - elicited antitumor immune responses
+        - PVS-RIPO (name of engineered virus)
+        - [current Phase II clinical trial w and w/o chemotherapy drug](https://clinicaltrials.gov/ct2/show/NCT02986178)
+        -
+      - [oncolytic viruses](https://www.cancer.gov/news-events/cancer-currents-blog/2018/oncolytic-viruses-to-treat-cancer) - infect and reproduce in cancerous cells
+        - can be natural or synthetic
+        - healthy cells should be able to fight the infection, or they can be engineered to not infect healthy cells
+        - believed to help release tumor antigens after killing the cells - help stimulate immune response (form of immunotherapy)
+        - **[study for brain tumors found viruses can cross blood-brain barrier, make checkpoint blockade more efficient](https://www.ncbi.nlm.nih.gov/pubmed/29298869)**
+        - FDA-approved (T-VEC) oncolytic virus for melanoma - injected into tumor
+          - combination therapy with pembrolizumab (Keytruda) found that this could inflame tumors (T cells go into the tumor), then allow the checkpoint inhibitors to work
 
   - immune system stimulation
     - cytokines - proteins that modulate normal/anti-cancer immune response, **interferons/interleukins**
-    - BCG - Bacillus Calmette-Guerin, for bladder cancer, weakened tuberculosis bacteria, inserted into bladder and causes immune response against cancer cells, being studied for other types of cancer
-  - not as common, still being studied
+      - communicate between different cell types - tell them to turn on/off
+      - help fight infections
+      - can be lab-synthesized
+      - IL-2 in significant amounts has side effects
+      - immune systems are designed to fight infection - turn off after the infection is suppressed
+        - this is essentially releasing the brakes on that process
+        - these have a larger effect than the current therapies because they activate T-cells all throughout the body
+    - BCG - Bacillus Calmette-Guerin, for bladder cancer, weakened tuberculosis bacteria, inserted into bladder and causes immune response against cancer cells, being studied for other types of cancer, has been in use for decades
   - some are given as cycles
   - oral, IV, topical, intravesical (directly into bladder)
+  - ## [FDA approved list of immunotherapies](https://medi-paper.com/us-fda-approved-immune-checkpoint-inhibitors-approved-immunotherapies/#toggle-id-1)

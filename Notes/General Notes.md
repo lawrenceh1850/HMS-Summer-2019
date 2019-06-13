@@ -32,6 +32,9 @@
   - [news](https://otd.harvard.edu/news/)
   - [specific technologies that they license](https://otd.harvard.edu/explore-innovation/technologies/)
 - [Open Philanthropy Project - give out grants](https://www.openphilanthropy.org/)
+- [Evergrande Center for Immunologic Disease](https://evergrande.hms.harvard.edu/)
+- [Genomic Data Commons](https://gdc.cancer.gov/) - unified data repo that enables data sharing across cancer genomic studies for precision medicine
+- [NCI biomarker network - center hosted at Dana Farber](https://www.cancer.gov/news-events/cancer-currents-blog/2018/immunotherapy-biomarkers-research-network)
 
 ## Project specific info
 
@@ -54,7 +57,7 @@
   - local vs. systemic
   - lifetime healthy limits
 - chemotherapy
-  - neoadjuvant - before surgery
+  - neoadjuvant - before surgery, make surgery more likely to succeed
   - adjuvant - after surgery to maximize probability of success
   - kills fast growing cells such as mouth/intestinal lining, hair
   - causes a lot of fatigue
@@ -128,6 +131,8 @@
 - usuallly removable and do not reoccur
 - unknown risk factors
 - life-threatening due to brain tissue compression - "benign" misleading
+- 85-90% of primary CNS tumors are in the brain for adults
+- 1-2% of CNS tumors are in the spinal cord for children
 - types
   - meningioma - membranes covering brain/spinal cord
   - schwannoma aka acoustic neuroma - Schwann cells
@@ -142,10 +147,13 @@
   - radiation theraepy - conventional, **gamma knife**, **proton beam**
   - corticosteroids - reduce edema (swelling), help recovery
 - outcomes
-  - 70% survival for children for all brain tumors
+  - 70% 5 yearsurvival for children for all brain tumors
   - long-term side effects common
   - survival rate decreases with age
   - **\*not a lot of data on survival rates for benign tumors**
+  - standards of care for childhood tumors often not established
+  - secondary tuors common in long term survivors (esp. for radiation)
+  - no staging system for most childhood brain tumors
 
 ### Adult CNS Treatment
 
@@ -178,7 +186,7 @@
   - active surveillance
   - supportive therapy
 
-## Notes that stick out
+## Notes of interest
 
 ---
 
@@ -217,7 +225,7 @@
   - there are some normal forms
   - indicate irritant, can progress into dysplasia
 - [dysplasia](https://en.wikipedia.org/wiki/Dysplasia) - immature cell types expand, earliest sign of cancer recognizable
-- [carcinoma in situ](https://en.wikipedia.org/wiki/Carcinoma_in_situ) -
+- [carcinoma in situ](https://en.wikipedia.org/wiki/Carcinoma_in_situ)
 - neoplasm - abnormal growth of cells
 - tumor = neoplasm that looks swollen
   - some neoplasms do not form tumors e.g. most forms of CIS and leukemia
@@ -245,9 +253,27 @@
 - corticosteroids - reduce inflammation
 - body surface area (BSA) - metric used for cancer drug dosing
 - complete remission - `The disappearance of all signs of cancer in response to treatment. This does not always mean the cancer has been cured. Also called complete response.`
-
-## To define
-
+- [consensus sequence](https://en.wikipedia.org/wiki/Consensus_sequence)
 - single-photon emission computed tomography (SPECT)
 - positron emission tomography (PET)
 - inflitrative capacity
+- [human leukocyte antigen](https://ghr.nlm.nih.gov/primer/genefamily/hla) (HLA) - gene complex that is the human version of the major histocompatibility complex (gene group that occurs in many species)
+- [CTCAE (Common Terminology Criteria for Adverse Events)](http://edcan.org.au/assets/edcan/files/CTCAE_v5_Quick_Reference_5x7%20edcan.pdf) - there are 5 grades of adverse events specifically used for cancer
+  - grade 1 - mild
+  - intermediate ones have varying degrees of severity (3 and 4 generally require hospitalization level)
+  - grade 5 - death
+- [T cell exhaustion](https://www.nature.com/articles/ni.2035) - poor effector function, sustained inhibitory effect, distinct transcriptional state
+- [tumor microenvironment](https://en.wikipedia.org/wiki/Tumor_microenvironment)
+  - [Warburg effect](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4783224/) -
+- [immunoediting](https://en.wikipedia.org/wiki/Immunoediting) - process by which tumors escape evasion by immune system
+- [tumor infiltrating lymphocytes](https://en.wikipedia.org/wiki/Tumor-infiltrating_lymphocytes)
+- [immune checkpoint inhibitors](https://www.esmo.org/Conferences/Past-Conferences/ESMO-Immuno-Oncology-Congress-2017/Educational-Articles/Cancer-Immunotherapy-Biomarkers)—(ICPis)—monoclonal antibodies that block cytotoxic T lymphocyte-associated antigen 4 (CTLA-4) and the programmed death-1 (PD-1) receptor (PD-1) and its ligand, PD-L1
+- [IFN-g - interferon gamma](https://www.ncbi.nlm.nih.gov/gene/3458)
+- [innate vs. adaptive immunity](http://www.biology.arizona.edu/immunology/tutorials/immunology/page3.html)
+- [MSI-H/dMMR](https://www.bms.com/modals/msi-h-ddmr.html) - tumor burden of mutation indicators
+- [immune repertoire](https://en.wikipedia.org/wiki/Immune_repertoire) - number of different sub-types an organism's immune system makes of any of the 6 key types of proteins
+- [gene expression profiling](https://www.thermofisher.com/us/en/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/gene-expression-analysis-real-time-pcr-information/introduction-gene-expression-profiling.html) - tell what genes are being expressed by a certain cell at any one time
+- liquid biopsy - `A test done on a sample of blood to look for cancer cells from a tumor that are circulating in the blood or for pieces of DNA from tumor cells that are in the blood. A liquid biopsy may be used to help find cancer at an early stage. It may also be used to help plan treatment or to find out how well treatment is working or if cancer has come back. Being able to take multiple samples of blood over time may also help doctors understand what kind of molecular changes are taking place in a tumor.`
+- [circulating tumor DNA (ctDNA)](https://vector.childrenshospital.org/2018/11/ctdna-liquid-biopsy-pediatric-solid-tumors/) - `In adult cancers, ctDNA analyses typically highlight point mutations — changes in a single “letter” of the genetic code. But pediatric cancers are different: ctDNA analyses generally must focus on structural changes in the DNA, such as translocations (rearrangements of DNA between chromosomes) or changes in the number of copies of a gene.`
+- [pseudoprogression](https://www.cancer.gov/news-events/cancer-currents-blog/2018/liquid-biopsy-childhood-brain-tumors)
+- [cross-presentation](https://en.wikipedia.org/wiki/Cross-presentation) - exogeneous antigens (normally presented by MHCII) are presented by MHCI on an APC, usually for an APC to present exogeneous it has to be infected, this allows it to not be infected and still trigger an adaptive immune response
