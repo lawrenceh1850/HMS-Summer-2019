@@ -151,9 +151,23 @@
   - long-term side effects common
   - survival rate decreases with age
   - **\*not a lot of data on survival rates for benign tumors**
-  - standards of care for childhood tumors often not established
-  - secondary tuors common in long term survivors (esp. for radiation)
+  - **standards of care for childhood tumors often not established**
+  - secondary tumors common in long term survivors (esp. for radiation)
   - no staging system for most childhood brain tumors
+
+### [The cancer genome](https://www.nature.com/articles/nature07943)
+
+- background
+  - all cancers arise from mutations
+  - 1/8 of global deaths are from cancer
+- history
+  - `specific and recurrent genomic abnormalities ... are associated with particular cancer types`
+- cancer is an evolutionary process
+  - Darwinian evolution among cell populations
+  - two main processes
+    - continuous acquisition of mutations from random events
+    - natural selection
+  -
 
 ### Adult CNS Treatment
 
@@ -196,6 +210,7 @@
 - CT vs. MRI diagnosis
 - most patients with CNS tumors usually don't live long enough to develop metastatic disease
 - [treatment of primary CNS tumors by type](https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq#link/_792)
+- [The safety and effectiveness of KEYTRUDA in pediatric patients with MSI-H central nervous system cancers have not been established](https://www.keytruda.com/hcp/msi-h/about-msi-h-dmmr/)
 
 ### To Read
 
@@ -271,9 +286,49 @@
 - [IFN-g - interferon gamma](https://www.ncbi.nlm.nih.gov/gene/3458)
 - [innate vs. adaptive immunity](http://www.biology.arizona.edu/immunology/tutorials/immunology/page3.html)
 - [MSI-H/dMMR](https://www.bms.com/modals/msi-h-ddmr.html) - tumor burden of mutation indicators
+  - microsatellites are short highly-repeated areas
+  - minisatellites = longer microsatellites
+  - are not selected against, accumulate mutations over time
+  - telomeres are a type of minisatellite
+  - mutations here result in loss/gain of an entire repeat unit
+  - useful for cancer because mutations might accumulate here especially quickly, can be used to find out the progression of tumors relative to the normal tissue that doesn't have as many changes
 - [immune repertoire](https://en.wikipedia.org/wiki/Immune_repertoire) - number of different sub-types an organism's immune system makes of any of the 6 key types of proteins
 - [gene expression profiling](https://www.thermofisher.com/us/en/home/life-science/pcr/real-time-pcr/real-time-pcr-learning-center/gene-expression-analysis-real-time-pcr-information/introduction-gene-expression-profiling.html) - tell what genes are being expressed by a certain cell at any one time
 - liquid biopsy - `A test done on a sample of blood to look for cancer cells from a tumor that are circulating in the blood or for pieces of DNA from tumor cells that are in the blood. A liquid biopsy may be used to help find cancer at an early stage. It may also be used to help plan treatment or to find out how well treatment is working or if cancer has come back. Being able to take multiple samples of blood over time may also help doctors understand what kind of molecular changes are taking place in a tumor.`
 - [circulating tumor DNA (ctDNA)](https://vector.childrenshospital.org/2018/11/ctdna-liquid-biopsy-pediatric-solid-tumors/) - `In adult cancers, ctDNA analyses typically highlight point mutations — changes in a single “letter” of the genetic code. But pediatric cancers are different: ctDNA analyses generally must focus on structural changes in the DNA, such as translocations (rearrangements of DNA between chromosomes) or changes in the number of copies of a gene.`
 - [pseudoprogression](https://www.cancer.gov/news-events/cancer-currents-blog/2018/liquid-biopsy-childhood-brain-tumors)
 - [cross-presentation](https://en.wikipedia.org/wiki/Cross-presentation) - exogeneous antigens (normally presented by MHCII) are presented by MHCI on an APC, usually for an APC to present exogeneous it has to be infected, this allows it to not be infected and still trigger an adaptive immune response
+- [enhancer](<https://en.wikipedia.org/wiki/Enhancer_(genetics)>)
+- cis vs. trans regulatory elements
+- passenger vs. driver events (mutations)
+  - passenger - don't do anything
+  - driver events - increase fitness of the cell
+    - can be genetic (SNVs, indels, CNAs, SVs, pathogens)
+    - epigenetic (DNA methylation)
+- [copy number variants](http://cnv.gene-quantification.info/)
+  - usually supposed to have 2 copies of every gene, but you can have more or fewer
+  - most common type of mutation, before they thought it was SNPs (CNVs are 3x more common than SNPs)
+- clonal mutation - all cancer cells have it (vs. subclonal)
+- HI C data
+- [tandom duplication](https://en.wikipedia.org/wiki/Tandem_repeat) - happens during replication of regions with many repeats due to replication slippage
+  - can be useful for genetic fingerprinting when the number of repeats is variable in populations
+- [unequal crossing over](https://en.wikipedia.org/wiki/Unequal_crossing_over)
+  - during meiosis crossing over, the sequences are not paired properly so one chromosome produced has duplicates of a gene while the other has a deletion
+  - this can happen more often in regions with many repeats because the misalignment happens more easily when there is a lot of similarity in the region
+  - exchanges a lot of DNA in one event
+- [structural variation (SV)](https://en.wikipedia.org/wiki/Structural_variation)
+  - any types of changes to structures in chromosomes
+- [dicentric](https://en.wikipedia.org/wiki/Dicentric_chromosome) - two centromeres
+- [RNA-seq video](https://www.youtube.com/watch?v=tlf6wYJrwKY)
+  - prepare sequencing library
+    - isolate rna
+    - break into RNA fragments
+    - convert into cDNA - more stable
+    - add adaptors to allow sequencing machine to recognize fratments, sequence different samples at the same time (different samples can use the same adaptors)
+  - filter out garbage reads
+    - low quality base calls OR
+    - artifacts of chemistry (ex. 2 adaptor sequences binded)
+  - measure relative expression based on whether the data is bulk or single cell
+- allele fraction
+  - allele drift
+- [unbiased differential expression proteomics](https://genome.duke.edu/cores-and-services/proteomics-and-metabolomics/unbiased-omic-differential-expression-proteomics)
