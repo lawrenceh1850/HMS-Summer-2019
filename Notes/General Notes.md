@@ -166,7 +166,136 @@
   - Darwinian evolution among cell populations
   - two main processes
     - continuous acquisition of mutations from random events
-    - natural selection
+    - natural selection - kills cells with bad mutations, selects for mutations that allow for more proliferation
+  - most that are selected for growth are benign, occasionally become cancerous
+- types of mutations
+  - mutations happen throughout lifetime
+  - passenger mutations don't do anything
+  - driver mutations cause clonal expansion
+  - resistance to chemotherapy usually develops before exposure to chemo, subsequent treatment selects for resistance
+  - gene amplification - copy number can advance to hundreds
+  - viruses can also contribute new DNA sources to the genome
+    - human papilloma virus, Epstein Barr virus, hepatitis B virus, human T lymphotropic virus 1 and human herpes virus 8
+  - epigenetic changes
+    - altered chromatin structure/gene expression
+    - changes in methylation status of some cytosine residues
+    - also subject to Darwinian selection as long as long as:
+      - there is epigenetic variation in the population of competing cells
+      - epigenetic variation can be passed on
+      - corresponding phenotypes for selection pressures to act on
+  - mitochondrial genome (~17kb also present)
+    - somatic mutations in mitochondrial genomes also reported in many cancers
+- acquisition of mutations
+  - mechanisms
+    - mutagens - internal/external origins
+    - some damage unrepaired, DNA replication has base error rate
+    - rates relatively unknown - different types of mutations/different tissue types likely have different rates
+  - timing
+    - some occur before cancer phenotypes
+    - others after - debate over whether somatic mutation rate is higher after neoplastic change
+    - some types of cancers definitely have higher rates - "mutator phenotype"
+    - others argue this is not required for development of some cancers
+    - in either case - more mutations means there is sequence diversity for selection
+    - sometimes there will be a large sudden change ("crisis") - might be due to shortening of telomeres, cell has to reorganize genome
+  - represent archaeological record of mutational processes
+- driver/passenger mutations
+  - driver - growth advantage, occur in "cancer genes"
+  - passenger - no growth advantage, happen to be present
+  - some genes may actually confer negative selection - few have been detected so far
+  - how to distinguish
+    - past approach - sequence small regions, use certain signatures of driver mutations
+      - driver - usually clustered around cancer genes
+      - passenger - usually randomly distributed
+    - WGS - many more passengers than drivers
+      - some mutational pathways may be focused on specific regions of the genome and generate clusters of passenger mutations
+      - be extra careful in using these signatures
+  - count - some estimates of about 5-6 drivers required for cancer in certain subtypes - other estimates higher - recurrence mutations (resist treatment) - some seem to predate treatment, transform from passengers to drivers after treatment is started
+- known cancer genes (**aka \*\*repertoire\*\***)
+  - estimated 350/22K genes shown to have recurrent somatic mutations
+  - about 10% of these are also found in germ line mutations
+  - estimated 2000 total cancer genes
+  - some found in more than 1 type of cancer, others specialized
+    - common ones: TP53, KRAS
+  - dominance
+    - about 90% of mutated genes are dominant - usually results in protein encoding
+      - more constrained mutation types - missense, insertions/deletions, gene amplification
+      - most from genomic rearrangement - fusion genes when they are positioned together, position cancer gene next to other regulatory elements
+    - 10% are recessive - protein stops being made, tumor suppressor genes
+      - diverse mutation types - SNP's, deletions
+  - some protein families/signalling families especially frequently mutated
+  - some cancers classified/treated by mutation type - opportunities for targeted therapies
+- Systematic sequencing of cancer genomes
+  - human genome project - several studies looking at point mutations for specific exons
+  - tradeoff between studying many genes for a specific cancer type and a few genes for many cancer types
+  - ex. IDH1 (part of Krebs cycle) found to be mutated in glioma
+  - important insights
+    - most point mutations are passengers (even in exons)
+    - `drivers appear to be distributed across a large number of genes, each of which is mutated infrequently, suggesting that the repertoire of somatically mutated human cancer genes is much larger than the ∼350 currently catalogued`
+    - certain patterns of mutations in certain cancer subtypes
+    - effects of chemo revealed
+      - certain drugs have a distinctive signature in the pattern of mutations that they select for
+    - rearrangements harder to classify
+- future
+  - sequence all bases for a sample from cancer, compare with reference genome
+  - challenges
+    - require deep coverage
+    - need to distinguish from baseline mutations
+      - some rare variants relatively common but still unknown
+    - need probably around 100B bp from a single genome to identify somatic mutations
+  - ICGC - working on it
+
+### [The molecular landscape of glioma in patients with Neurofibromatosis 1](https://www-nature-com.revproxy.brown.edu/articles/s41591-018-0263-8)
+
+- Neurofibromatosis type 1 (NF1) - tumor predisposition syndrome
+  - glioma is a prevalent tumor - can be low to high grade
+  - low grade gliomas primarily diagnosed for younger patients, reverse for higher grade gliomas
+  - [interesting data chart](https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41591-018-0263-8/MediaObjects/41591_2018_263_Fig1_HTML.png?as=webp)
+  - WES done on blood/glioma samples for those available
+  - inferred germline status of NF1 mutations from tumor-only samples using computational approach
+  - 91% patients had germline mutations that inactivated NF1 gene
+    - distribution of mutations not correlated with protein domains, age, or tumor grade
+    - mutations increased in the glioma DNA - patients lost both functioning versions of the allele
+    - somatic mutations also found in 7/56 patients where there was a germline mutation on one allele and a somatic mutation on the other - **check to see if both alleles have the mutation**
+  - **`The application of a stringent somatic **mutation**-calling algorithm to the cohort of NF1-glioma resulted in <x number of mutations>`**
+    - **higher grades and ages had higher mutational burden**
+    - **`GISTIC2.0?`**
+    - IDH was wildtype in all gliomas in this study
+    - **classified the number of mutational clones for age and grade**
+  - **compared certain mutation frequencies to another type of glioma** - sporadic gliomas
+  - **figured out which factors were predictors of certain mutations/correlations**
+  - **identified specifically targeted biological pathways and frequency in different grades of gliomas**
+  - **identify heterogeneity in different spatial portions of tumors if possible**
+  - **verified predicted protein expression from sequencing data with IHC/assays of samples**
+  - **difference between primary and secondary tumors**
+  - RNA expression
+    - RNAseq profiles
+    - **unsupervised consensus clustering (?)**
+    - found that grading of tumors correlated with clustering based on transcriptomes
+  - **immune response**
+    - Mann–Whitney–Wilcoxon (MWW) test (?) - characterized the functionality of the groups revealed by the unsupervised clustering
+      - MWW-GST - gene ontology enrichment map network
+    - `ESTIMATE45, a validated computational approach for the inference of the fraction of stromal/immune cells and consequently the tumor cell purity within tumor samples`
+    - `transcriptomic-based analysis with five different CD8+ T cell-specific gene expression signatures` - show the differential expression of CD8<sup>+</sup> T cells
+      - conducted immunostaining to verify
+    - **granzyme B (GZMB)** - the key cytolytic effector that is upregulated on CD8+ T cell activation, and productive responses to immunotherapies
+  - methylation data
+    - `Recent data showed that aberrant DNA methylation of genes expressed by immune cells regulates the extent of immune infiltration in solid tumors`
+    - `profiled 11 of the low-grade NF1-gliomas previously analyzed by RNAseq with the 850K Epic Methylation platform`
+    - **figured out which genes were hypermethylated in high vs. low immune NF1-gliomas**
+  - neoantigens
+    - `NF1-gliomas profiled with matched germline/tumor WES and tumor RNAseq for HLA typing and tumor neoantigen identification`
+    - `performed a homogenous, proximity-based assay that measures the affinity kinetics of mutant neoantigens and corresponding wild-type peptides for binding to their restricted HLA class I allele` - **figure out specific neoantigens**
+  - comparison to other types of gliomas using TCGA
+    - `compared the epigenetic features through an integrative analysis of DNA methylation profiles of NF1-gliomas and the TCGA pan-glioma data set`
+    - `performed a supervised classification of NF1-gliomas using a nearest neighbor classifier trained on sporadic gliomas`
+    - `unsupervised clustering, merging sporadic TCGA gliomas and NF1-gliomas`
+    - `used mathematical methods based on a multiple linear regression model to deconvolute mutation signatures that in other cancer types have been associated with distinct underlying mutational processes`
+    - looked at patterns of driver mutations/CNV's in related group of gliomas
+    - looked at master regulator patterns using gene regulatory network (computational technique) - clustered based on MR patterns
+      - found correlation with certain type of mutation between the two clustered groups
+    - looked at what the master regulators did specifically - in this case had chromatin/transcription regulation goals in the mutant gliomas
+- Discussion
+  - surgical resection generally not recommended due to `inaccessible brain tumor location, the relatively benign behavior of brain lesions, the comorbidities, and the neurological deterioration associated with surgical intervention`
   -
 
 ### Adult CNS Treatment
@@ -332,3 +461,14 @@
 - allele fraction
   - allele drift
 - [unbiased differential expression proteomics](https://genome.duke.edu/cores-and-services/proteomics-and-metabolomics/unbiased-omic-differential-expression-proteomics)
+- gene amplification - copy number can advance to hundreds
+- look into things from 6/14 conference
+- churn rate - turnover rate of a population (insurance, how many people will switch plans)
+- [master regulater (MR)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3718559/) - not under regulatory influence of any other gene
+- [gene regulatory network](https://en.wikipedia.org/wiki/Gene_regulatory_network#Overview)
+- [ChIP-seq](https://en.wikipedia.org/wiki/ChIP-sequencing)
+- [sporadic vs. hereditary cancers](https://www.facingourrisk.org/understanding-brca-and-hboc/information/hereditary-cancer/hereditary-genetics/basics/hereditary-vs-sporadic-cancer.php)
+- [methylation patterns and CpG islands](http://www.web-books.com/MoBio/Free/Ch7F2.htm)
+  - [mutation mechanisms](http://www.web-books.com/MoBio/Free/Ch7F.htm)
+  - [DNA repair mechanisms](http://www.web-books.com/MoBio/Free/Ch7G.htm)
+- [drug discovery process paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543995/)

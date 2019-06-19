@@ -27,7 +27,7 @@
     - [malignant](https://medlineplus.gov/ency/article/002253.htm) - cancerous cells with ability to metastasize or invade locally (nearby)
       - fast, uncontrolled growth
       - do not die normally
-  - ## **types of benign brain tumors**
+  - **types of benign brain tumors**
 
 - [from this article](https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq#_1)
   - In pilocytic astrocytomas (WHO grade I), tandem duplication at 7q34 leading to a fusion between KIAA1549 and BRAF is found in approximately 70% of pilocytic astrocytomas.[6-8] An activating point mutation in BRAF (V600E) is found in an additional 5% to 9% of these tumors and in general, RAF alterations occur in approximately 80% of pilocytic astrocytomas.
