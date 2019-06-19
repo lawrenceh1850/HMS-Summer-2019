@@ -472,3 +472,4 @@
   - [mutation mechanisms](http://www.web-books.com/MoBio/Free/Ch7F.htm)
   - [DNA repair mechanisms](http://www.web-books.com/MoBio/Free/Ch7G.htm)
 - [drug discovery process paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543995/)
+- [tumor stroma paper](https://www.sciencedirect.com/science/article/pii/S1556086415319201)
