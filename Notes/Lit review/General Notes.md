@@ -295,8 +295,40 @@
       - found correlation with certain type of mutation between the two clustered groups
     - looked at what the master regulators did specifically - in this case had chromatin/transcription regulation goals in the mutant gliomas
 - Discussion
+
   - surgical resection generally not recommended due to `inaccessible brain tumor location, the relatively benign behavior of brain lesions, the comorbidities, and the neurological deterioration associated with surgical intervention`
-  -
+
+### Review Article from Park Lab
+
+- variant allele fractions - generated from bulk sequencing data
+- how to profile mosaic mutation variants (SNVs)
+  - bulk vs.
+    - hard to figure out which mutations were from embryogenesis
+    - VAF's might not be exactly symmetrical due to selection during division and varying cell cycle lengths
+    - which tissue subset is "normal"?
+  - single cell
+    - clonal expansion for NGS - in vitro mutations
+    - whole genome amplification
+  - mutation calling for tumors
+    - matched normal
+    - public variation databases
+    - panel of normals (PON)
+  - mutation calling for non-tumors
+    - no clear "normal"
+    - panel approach? - harder because mutation rates lower
+    - parent-child trio analysis - still hard to tell even after removing variants absesnt in both parents
+- detecting mosaic structural variants (CNVs)
+  - clonal heterogeneity
+  - non tumor samples - CNV change small, no normal samples
+  - single cell seq - success for large CNVs
+  - linked reads might be able to help with repeats
+    - more costly, but helps with haplotype construction/structural variants
+  - single molecule seq - PacBio and Oxford Nanopore, not yet scalable
+- increase accuracy by haplotype phasing
+  - **`Haplotype phasing is informative in several applications, including correlating genetic variation with disease, detecting genotyping error, inferring evolutionary history, and examining the effect of cis-regulatory elements on gene expression`**
+  - **`Phasing is beneficial for somatic mutation detection because true mosaic events create a new haplotype with a consistent allele sequence, whereas artifacts often associate with haplotypes non-specifically.`**
+- baseline mutations from various sequencing and handling artifacts can be higher than the rate of somatic mutations
+- ML algorithms to combine features to call mutations more accurately
 
 ### Adult CNS Treatment
 
@@ -473,3 +505,6 @@
   - [DNA repair mechanisms](http://www.web-books.com/MoBio/Free/Ch7G.htm)
 - [drug discovery process paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5543995/)
 - [tumor stroma paper](https://www.sciencedirect.com/science/article/pii/S1556086415319201)
+- sensitivity vs. specificity
+  - ![](img/2019-06-20-09-34-53.png)
+- phasing of haplotypes - figuring out which genes are usually inherited together

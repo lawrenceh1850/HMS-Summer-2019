@@ -65,3 +65,4 @@
   - other person - not optimistic about TMB (cutoff doesn't have enough sensitivity/specificiti)
     - wants to use larger assays to find smaller subset of factors
 - who can accelerate multiplex IHC - there is a part 2 to this seminar
+  - biotech startups

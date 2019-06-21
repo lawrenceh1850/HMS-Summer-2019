@@ -110,4 +110,11 @@
     - BCG - Bacillus Calmette-Guerin, for bladder cancer, weakened tuberculosis bacteria, inserted into bladder and causes immune response against cancer cells, being studied for other types of cancer, has been in use for decades
   - some are given as cycles
   - oral, IV, topical, intravesical (directly into bladder)
-  - ## [FDA approved list of immunotherapies](https://medi-paper.com/us-fda-approved-immune-checkpoint-inhibitors-approved-immunotherapies/#toggle-id-1)
+  - [FDA approved list of checkpoint inhibitors](https://medi-paper.com/us-fda-approved-immune-checkpoint-inhibitors-approved-immunotherapies/#toggle-id-1)
+    - ipilimumab (Yervoy) - CTLA4
+    - pembrolizumab (Keytruda) - PD-1
+    - nivolumab (Opdivo) - PD-1
+    - atezolizumab (Tecentriq) - PD-L1
+    - avelumab (Bavencio) - PD-L1
+    - durvalumab (Imfinizi) - PD-L1
+    - cemiplimab (Libtayo) - PD-1

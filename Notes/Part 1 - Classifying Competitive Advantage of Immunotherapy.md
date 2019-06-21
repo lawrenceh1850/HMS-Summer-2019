@@ -35,6 +35,8 @@
 
 ### Criteria for classifying current cancer by competitive advantage
 
+- START HERE: get list of current brain tumors
+- current standard of care
 - WHO Grades (TNM classification scheme dropped)
 - location of tumor
 - cost (?)

@@ -138,6 +138,78 @@
   - tumors still have a lot of macrophages, but replication mistakes can be targeted
   - prevent replication/tumor growth
 
+### [The evolving landscape of biomarkers for checkpoint inhibitor immunotherapy](https://www.nature.com/articles/s41568-019-0116-x)
+
+- combination of factors involving
+  - tumour genomics
+  - host germline genetics
+  - PD1 ligand 1 (PDL1) levels
+  - other features of the tumour microenvironment
+  - gut microbiome
+- `immunotherapies on a whole have fewer adverse effects than chemotherapy` (with citations)
+  - still need to identify predictors of toxicity
+- risk factors for irAEs
+  - low IL-6 - also correlated with better OS for CTLA4 treatment
+  - female sex
+  - [one study used ML for antibody profiles to predict toxicity](https://www-ncbi-nlm-nih-gov.revproxy.brown.edu/pubmed/29606147?dopt=Abstract)
+  - many patients with irAEs actually had response/better survival
+- non-mutated self-antigens - overexpressed in tumor cells
+  - central tolerance might limit effect of these as immunotherapy targets
+  - increased expression of CRMA cluster - associated with poor survival when treated with anti-CTLA4, not correlated with overall survival
+  - TMB - correlation for most types of cancer, in the aggregate but not for many individuals specifically
+    - **dynamic vs. static biomarkers**
+    - measure delta TMB instead of just TMB
+    - using circulating DNA to non-invasively quantify this
+    - infiltration associated more with recurrent mutations rather than CNV's - type of mutation also very important
+    - virus-driven tumors - also showed larger immune response, might be because of more neoantigens
+  - MHC-I restricted and MHC II restricted neoantigens (arise from somatic mutations)
+    - neoantigens that are actually targeted by T cells should be more predictive - how to identify?
+    - predict neoantigen binding (to the MHC complex itself) based on the residues at specific positions in the MHC-I complex
+      - doesn't do better than general TMB - need more than just binding affinity
+    - how often the neoantigen is expressed in cancer cells - want a clonal rather than a subclonal mutation
+    - **intratumoral heterogeneity (ITH)**
+      - combine neoantigen load and ITH cutoffs improved stratification of survival
+      - `suggests that therapeutic history may influence the predictive power of immunotherapy biomarkers but not the efficacy of the drugs themselves`
+      - high ITH associated with poor outcomes in other treatments
+    - binding of a TCR to the MHC-neoantigen complex - **currently not modeled**, so current estimates of neoantigen burden likely overestimates
+      - difficult to do because of the vast TCR repertoire
+      - same theory - that mutations of the neoantigen at TCR binding site will cause immunogenicity
+      - **want to evaluate how foreign a neoantigen will appear to the TCR**
+      - can be experimentally validated using the **differential agretopicity index (DAI)** - some studies have shown this was predictive of OS `independent of overall TMB, age and gender`
+      - another approach - assess sequence homoogy compared to microbial epitopes (from Immune Epitope Database (IEDB))
+        - combined ITH, DAI, and sequence homology
+        - this requires optimization of various parameters - which differs by cancer type
+  - not necessarily true that DNA damaging agents (such as chemo) will have a better response because they will have more TMB, some studies have shown that first-line immunotherapy has produced results equal to or greater than those for heavily pretreated patients
+    - DNA damaging agents can increase ITH
+    - other studies have shown that most mutations are not even a result of chemo but from processes that already existed before the treatment
+- mutation signatures
+  - tumors with dMMR and MSI-H are highly sensitive to ICI therapy regardless of tissue of origin
+    - MSI-H generates a lot of neoantigens
+    - dMMR 
+      - many indels, potential frameshifts
+      - also results in more ITH - possible that because there are so many neoantigens, it doesn't matter
+    - `MSI-positive colon tumours also express high levels of multiple immune checkpoint molecules including PD1, PDL1, CTLA4, lymphocyte activating 3 (LAG3) and the interferon-γ (IFNγ)-inducible immune inhibitory metabolic enzyme indoleamine 2,3-dioxygenase 1 (IDO1)`
+      - genomics also impacts the microenvironment
+  - mutations in POLD and POLE - encode for polymerases cause hypermutation
+  - homologous recombination DNA repair pathway
+- insertion/deletion mutations
+  - nsSNVs - most common type of mutation analyzed in TMB
+  - indel mutations also contribute many neoantigens
+  - indel load found not to correlate in RCC
+  - indel load found to correlate with tumor response but not OS
+    - **initial tumor response might not correlate with survival**
+- somatic copy number alterations
+  - large scale chromosome events (>1000bp), <1000bp considered an indel
+  - can combine with TMB to be a predictor
+- specific genes that predict survival advantage
+  - differs by cancer type
+  - abberant expression of endogenous tetroviruses (ERVs)
+    - studies have found both positive and negative associations of ERVs
+- human immunopeptidome
+  - more diverse HLA-I molecules correspond to better survival
+  - patients that were heterozygous at all HLA-I loci had better clonality of TCRs
+  - 
+
 ### Sources
 
 - https://www.uptodate.com/contents/patient-selection-criteria-and-toxicities-associated-with-checkpoint-inhibitor-immunotherapy
