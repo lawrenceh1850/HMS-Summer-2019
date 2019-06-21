@@ -1,8 +1,0 @@
-<!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252"></head><body>
-        <script type="text/javascript">
-            'use strict';(function(){window.addEventListener("message",function(b){try{var a=JSON.parse(b.data);if(a.command&&0===a.command.indexOf("pronto:")){try{switch(a.command){case "pronto:read":a.value=localStorage.getItem(a.key);break;case "pronto:write":localStorage.setItem(a.key,a.value)}}catch(c){a.error=c.name}window.parent.postMessage(JSON.stringify(a),b.origin)}}catch(c){}},!1)})();
-        </script>
-    
-</body></html>
