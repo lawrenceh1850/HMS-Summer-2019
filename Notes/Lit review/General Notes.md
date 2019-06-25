@@ -372,6 +372,11 @@
 - most patients with CNS tumors usually don't live long enough to develop metastatic disease
 - [treatment of primary CNS tumors by type](https://www.cancer.gov/types/brain/hp/adult-brain-treatment-pdq#link/_792)
 - [The safety and effectiveness of KEYTRUDA in pediatric patients with MSI-H central nervous system cancers have not been established](https://www.keytruda.com/hcp/msi-h/about-msi-h-dmmr/)
+- Should look into the inclusion/exclusion criteria for immunotherapies
+  - MSI-H and dMMR probably won't be applicable to benign tumors because the tumor mutational burden will probably be really high in those cases and result in a malignant tumor
+- look into longitudinal studies - Pre Cancer Genome Atlas
+  - where there were biomarkers and then you can see the progression of disease
+- [paper on the differences between adult and pediatric CNS tumors](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3529408/)
 
 ### To Read
 

@@ -1,0 +1,8 @@
+- lining of intestines renews every 4 days
+- Lgr5 cells form miniguts in 3D culture
+  - use specific signals to make organoids w/ normal ratio of cell types - can mess with signals to make any ratio of cells
+  - grow very rapidly - 10x growth every week
+- don't start from stem cells - start from normal cells
+- can only grow epithelium cells with regenerative capacity
+- knocked out various genes and then tested to see response
+- 
