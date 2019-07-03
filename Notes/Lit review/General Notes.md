@@ -256,7 +256,7 @@
     - distribution of mutations not correlated with protein domains, age, or tumor grade
     - mutations increased in the glioma DNA - patients lost both functioning versions of the allele
     - somatic mutations also found in 7/56 patients where there was a germline mutation on one allele and a somatic mutation on the other - **check to see if both alleles have the mutation**
-  - **`The application of a stringent somatic **mutation**-calling algorithm to the cohort of NF1-glioma resulted in <x number of mutations>`**
+  - **`The application of a stringent somatic mutation-calling algorithm to the cohort of NF1-glioma resulted in <x number of mutations>`**
     - **higher grades and ages had higher mutational burden**
     - **`GISTIC2.0?`**
     - IDH was wildtype in all gliomas in this study
