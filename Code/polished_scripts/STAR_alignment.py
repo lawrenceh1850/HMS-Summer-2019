@@ -31,6 +31,12 @@ import os
 import glob
 import argparse
 import re
+
+from helpers import _split_all_ext, _handle_directory_cleaning
+
+# CONSTANTS
+ACCESSION_REGEX = re.compile("(SRR[0-9]+)")
+INPUT_EXTENSION_REGEX = "*.fastq*"
     
 def parse_args():
     """Uses argparse to enable user to customize script functionality, returns a dictionary object."""
@@ -48,6 +54,20 @@ def parse_args():
     parser.add_argument("--mail_user", default="lawrence_huang1@brown.edu", help="slurm job submission option")
     return vars(parser.parse_args())
 
+def clean_arg_paths(args_dict):
+    """Replaces '.' in paths, modifying args_dict."""
+    
+    # replaces paths starting with "." for input/output directory
+    input_dir = args_dict["input_directory"]
+    output_dir = args_dict["output_directory"]
+    index_dir = args_dict["index_directory"]
+    if input_dir is not None:
+        args_dict["input_directory"] = _handle_directory_cleaning(input_dir)
+    if index_dir is not None:
+        args_dict["index_directory"] = _handle_directory_cleaning(index_dir)
+    if output_dir is not None:
+        args_dict["output_directory"] = _handle_directory_cleaning(output_dir)
+    
 def return_slurm_command(args_dict):
     """Returns slurm command given args_dict provided as string."""
     
@@ -60,45 +80,42 @@ def return_slurm_command(args_dict):
                 "#SBATCH --mail-user=" + args_dict["mail_user"] + "\n"
     if args_dict["queue"] in ["park", "priopark"]:
         slurm_command += "#SBATCH --account=park_contrib" + "\n"
-    slurm_command += "module load conda2/4.2.13.lua\n" + \
-    "source activate /home/ag457/anaconda3/envs/optitype\n"
 
     return slurm_command
 
-def get_input_files(file_ext):
-    all_inputs = [input_file for input_file in glob.glob(os.path.join(FASTQ_IN_DATA_DIR, "*")) if input_file.endswith(file_ext)]
-    
-    completed_accessions = []
-    
-    for file_path in glob.glob(os.path.join(OUT_DIR, "*.final.out")):
-        accession = os.path.splitext(os.path.basename(file_path))[0].split("_")[0]
-        completed_accessions.append(accession)
-    
-    return [input_file for input_file in all_inputs if os.path.splitext(os.path.basename(input_file))[0].split("_")[0] not in completed_accessions]
+def get_input_files(input_dir):
+    """Returns list of input FASTQ's from input directory."""
+    return [input_file for input_file in glob.glob(os.path.join(input_dir, INPUT_EXTENSION_REGEX))]
 
-def gen_sh_files(input_files):
-    os.makedirs(os.path.join(OUT_DIR, ".sh"), exist_ok=True)
+def run_alignment(slurm_command, input_files, index_dir, output_dir, numThreads):
+    """Creates and submits alignment scripts."""
+    os.makedirs(os.path.join(output_dir, ".sh"), exist_ok=True)
     for input_file in input_files:
-        run_name = os.path.splitext(os.path.basename(input_file))[0]
-        
-        MAIN_CMD = f"module load gcc/6.2.0 star/2.7.0f; STAR --genomeDir {INDEX_DIR} " + \
-         f"--runThreadN {NUM_THREADS} --readFilesIn {input_file} --outFileNamePrefix {run_name}"
-        
-        with open(os.path.join(OUT_DIR, ".sh", run_name + ".sh"), "w+") as fp:
-            fp.write(SBATCH_OPTIONS + MAIN_CMD)
-        os.system("chmod u+x " + os.path.join(OUT_DIR, ".sh", run_name + ".sh"))
-        os.system("sbatch " + os.path.join(OUT_DIR, ".sh", run_name + ".sh"))
+        # search for accession in file name
+        run_name_match = ACCESSION_REGEX.search(os.path.basename(input_file))
+        if run_name_match:
+            run_name = run_name_match.group(1)
+            main_command = f"module load gcc/6.2.0 star/2.7.0f; STAR --genomeDir {index_dir} " + \
+            f"--runThreadN {numThreads} --readFilesIn {input_file} --outFileNamePrefix {run_name}"
+            
+            script_name = os.path.join(output_dir, ".sh", run_name + "_STAR_align.sh")
+            with open(script_name, "w+") as fp:
+                fp.write(slurm_command + main_command)
+            os.system("chmod u+x " + script_name)
+            os.system("sbatch " + script_name)
 
 if __name__ == "__main__":
     args_dict = parse_args()
     clean_arg_paths(args_dict)
     
     input_dir = args_dict["input_directory"]
+    index_dir = args_dict["index_directory"]
     output_dir = args_dict["output_directory"]
     
     if input_dir is not None: 
         slurm_command = return_slurm_command(args_dict)
-        paired_reads_path_dict = generate_paired_reads_dict(input_dir)
-        run_filter_optitype(paired_reads_path_dict, slurm_command, output_dir)
+        input_files = get_input_files(input_dir)
+        
+        run_alignment(slurm_command, input_files, index_dir, output_dir, args_dict["num_cores"])
     else:
         print("No input directory specified.")

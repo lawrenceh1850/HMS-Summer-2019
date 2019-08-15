@@ -1,20 +1,30 @@
 """
-<h3>Determines HLA Class I alleles from <strong><u>paired end</u></strong> FASTQ's using the Optitype tool.</h3>
+<h3>Determines HLA Class I alleles from <strong><u>paired end</u></strong> 
+FASTQ's using the Optitype tool.</h3>
 
 Meant to be run as a command line script. Run with `--help` flag for options. 
-Assumes that input FASTQs have the format SRR{accession}_{#} where {#} is either 1 or 2, indicating the paired read.
+Assumes that input FASTQs have the format SRR{accession}_{#} where {#} is 
+either 1 or 2, indicating the paired read.
 
 Each FASTQ undergoes two stages of processing:
 
-1. Filtering of reads that map to the HLA regions (this step is technically optional but enables faster reprocessing if `optitype` needs to be run again)
+1. Filtering of reads that map to the HLA regions (this step is technically 
+optional but enables faster reprocessing if `optitype` needs to be run again)
 
 2. Determination of HLA class I alleles from the filtered reads
 
-<strong>NB: paired reads are filtered and HLA typed separately. A script downstream in the pipeline will handle the pairing together of paired reads.</strong>
+<strong>NB: paired reads are filtered and HLA typed separately. A script 
+downstream in the pipeline will handle the pairing together of paired reads.</strong>
 
-<strong>NB:</strong> Requires installation of the `optitype` `conda` environment (see <a href="https://bioconda.github.io/recipes/optitype/README.html"><u>link</u></a>).
+<strong>NB:</strong> Requires installation of the `optitype` `conda` environment
+(see <a href="https://bioconda.github.io/recipes/optitype/README.html"><u>link</u></a>).
 
-Original Github documentation <a href="https://github.com/FRED-2/OptiType"><u>here</u></a> (contains explanation of filtering step, specific dependencies, etc.). It's also possible to install from source, but the `conda` environment is one simple command to install (some of the dependencies were slightly different between the original Optitype directions and what was in the `conda` install but this did not affect functionality).
+Original Github documentation <a href="https://github.com/FRED-2/OptiType">
+<u>here</u></a> (contains explanation of filtering step, specific dependencies, 
+etc.). It's also possible to install from source, but the `conda` environment is
+one simple command to install (some of the dependencies were slightly different 
+between the original Optitype directions and what was in the `conda` install but
+this did not affect functionality).
 """
 
 import os
@@ -133,8 +143,9 @@ def make_optitype_sh(output_dir, complete_command, input_accession):
     
     with open(script_path, "w") as fp:
         fp.write(complete_command)
+    # change permissions and submit to O2
     os.chmod(script_path, 0o700)
-    # os.system("sbatch " + script_path)
+    os.system("sbatch " + script_path)
 
 def run_filter_optitype(paired_reads_path_dict, slurm_command, output_dir):
     """Driver method to process all paired reads specified in the dictionary"""
