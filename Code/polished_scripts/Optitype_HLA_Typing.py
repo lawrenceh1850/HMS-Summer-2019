@@ -32,7 +32,7 @@ import glob
 import argparse
 import re
 
-from .helpers import _split_all_ext, _handle_directory_cleaning
+from helpers import _split_all_ext, _handle_directory_cleaning
 
 # CONSTANTS
 OPTITYPE_CONFIG_PATH = "/n/data1/hms/dbmi/park/alon/command_line_tools/Optitype/config.ini"

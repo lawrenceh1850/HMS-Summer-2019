@@ -15,7 +15,7 @@ import glob
 import argparse
 import re
 
-from .helpers import _split_all_ext, _handle_directory_cleaning
+from helpers import _split_all_ext, _handle_directory_cleaning
 
 # CONSTANTS
 INPUT_EXTENSION_REGEX = "*.sam"
