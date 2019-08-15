@@ -1,5 +1,5 @@
 """
-Runs HTSeq read counts script.
+<h3>Runs HTSeq read counts script.</h3>
 
 Utilizes the HTSeq conda environment from `/home/ag457/anaconda3/envs/HTSeq`.
 
