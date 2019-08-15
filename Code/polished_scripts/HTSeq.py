@@ -1,4 +1,4 @@
-""""
+"""
 Runs HTSeq read counts script.
 
 Utilizes the HTSeq conda environment from `/home/ag457/anaconda3/envs/HTSeq`.
@@ -15,7 +15,7 @@ import glob
 import argparse
 import re
 
-from helpers import _split_all_ext, _handle_directory_cleaning
+from .helpers import _split_all_ext, _handle_directory_cleaning
 
 # CONSTANTS
 INPUT_EXTENSION_REGEX = "*.sam"
