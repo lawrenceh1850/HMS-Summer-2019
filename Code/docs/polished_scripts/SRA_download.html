@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.3" />
+<title>polished_scripts.SRA_download API documentation</title>
+<meta name="description" content="&lt;h3&gt;Download FASTQ&#39;s given either a specific accession or a .txt file with an accession on each line.&lt;/h3&gt; …" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>polished_scripts.SRA_download</code></h1>
+</header>
+<section id="section-intro">
+<h3>Download FASTQ's given either a specific accession or a .txt file with an accession on each line.</h3>
+<p>Meant to be run as a command line script. Run with <code>--help</code> flag for options.</p>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">&#34;&#34;&#34;&lt;h3&gt;Download FASTQ&#39;s given either a specific accession or a .txt file with an accession on each line.&lt;/h3&gt;
+
+Meant to be run as a command line script. Run with `--help` flag for options.&#34;&#34;&#34;
+
+import os
+import glob
+import argparse
+
+def parse_args():
+    &#34;&#34;&#34;Uses argparse to enable user to customize script functionality, returns a dictionary object.&#34;&#34;&#34;
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument(&#34;-acc&#34;, &#34;--SRA_accession&#34;, default=None, help=&#34;SRA Accession to download&#34;)
+    parser.add_argument(&#34;-in_file&#34;, &#34;--input_file&#34;, default=None, help=&#34;Files with SRA Accessions to download, one accession per line&#34;)
+    parser.add_argument(&#34;-split&#34;, &#34;--split_mode&#34;, default=&#34;--split-3&#34;, help=&#34;Option to split output files, see `fastq-dump --help` for more options`&#34;)
+    parser.add_argument(&#34;--gzip&#34;, action=&#34;store_true&#34;, help=&#34;Will keep downloaded FASTQ&#39;s gzipped if present&#34;)
+    parser.add_argument(&#34;-out&#34;, &#34;--output_dir&#34;, default=&#34;./&#34;, help=&#34;Optional output directory, default is current directory&#34;)
+    parser.add_argument(&#34;-n&#34;, &#34;--num_cores&#34;, default=&#34;1&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;-t&#34;, &#34;--runtime&#34;, default=&#34;0-5:00:00&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;-p&#34;, &#34;--queue&#34;, default=&#34;park&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mem_per_cpu&#34;, default=&#34;10G&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mail_type&#34;, default=&#34;ALL&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mail_user&#34;, default=&#34;alon_galor@hms.harvard.edu&#34;, help=&#34;slurm job submission option&#34;)
+    return vars(parser.parse_args())
+
+def clean_arg_paths(args_dict):
+    &#34;&#34;&#34;Replaces &#39;.&#39; in paths, modifying input dictionary.&#34;&#34;&#34;
+    # replace path starting with &#34;./&#34; for input file
+    if args_dict[&#34;input_file&#34;] is not None and args_dict[&#34;input_file&#34;].startswith(&#34;.&#34; + os.sep): 
+        args_dict[&#34;input_file&#34;] = os.path.join(os.getcwd(), args_dict[&#34;input_file&#34;][2:])
+    
+    # replaces paths starting with &#34;.&#34; for output directory
+    output_dir = args_dict[&#34;output_dir&#34;]
+    if output_dir is not None:
+        if output_dir.startswith(&#34;.&#34;): 
+            split_output = output_dir.split(os.sep)
+            if len(split_output) &gt; 1:
+                split_output = split_output[1:]
+            split_output = os.sep.join(split_output)
+            args_dict[&#34;output_dir&#34;] = os.path.join(os.getcwd(), split_output)
+
+def return_slurm_command(args_dict):
+    &#34;&#34;&#34;Returns slurm command given args_dict provided as string.&#34;&#34;&#34;
+    slurm_command = &#34;#!/bin/bash\n&#34; + \
+                &#34;#SBATCH -n &#34; + args_dict[&#34;num_cores&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH -t &#34; + args_dict[&#34;runtime&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH -p &#34; + args_dict[&#34;queue&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mem-per-cpu=&#34; + args_dict[&#34;mem_per_cpu&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mail-type=&#34; + args_dict[&#34;mail_type&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mail-user=&#34; + args_dict[&#34;mail_user&#34;] + &#34;\n&#34;
+    if args_dict[&#34;queue&#34;] in [&#34;park&#34;, &#34;priopark&#34;]:
+        slurm_command += &#34;#SBATCH --account=park_contrib&#34; + &#34;\n&#34;
+    return slurm_command
+
+def return_primary_command(args_dict, accession):
+    &#34;&#34;&#34;Returns primary command to be executed as string.&#34;&#34;&#34;
+    primary_command = &#34;module load sratoolkit\n&#34; + \
+                    &#34;fastq-dump {}&#34;.format(args_dict[&#34;split_mode&#34;])
+    if args_dict[&#34;output_dir&#34;] is not None:
+        primary_command += &#34; --outdir {}&#34;.format(args_dict[&#34;output_dir&#34;])
+    if args_dict[&#34;gzip&#34;]:
+        primary_command += &#34; --gzip&#34;
+    primary_command += &#34; &#34; + accession
+    return primary_command
+
+def make_download_sh(args_dict, slurm_command, accession):
+    &#34;&#34;&#34;Creates and submits to O2 a shell script to download a specific accession, no return value.&#34;&#34;&#34;
+    output_dir = args_dict[&#34;output_dir&#34;]
+    SHELL_DIR = os.path.join(output_dir, &#34;.sh&#34;)
+    os.makedirs(SHELL_DIR, exist_ok=True)
+    
+    if args_dict[&#34;gzip&#34;] is not None:
+        SHELL_PATH = os.path.join(SHELL_DIR, accession + &#34;_gzip_download.sh&#34;)
+    else:
+        SHELL_PATH = os.path.join(SHELL_DIR, accession + &#34;_download.sh&#34;)
+    
+    primary_command = return_primary_command(args_dict, accession)
+    
+    with open(SHELL_PATH, &#34;w&#34;) as fp:
+        fp.write(slurm_command + primary_command)
+    os.chmod(SHELL_PATH, 0o700)
+    os.system(&#34;sbatch &#34; + SHELL_PATH)
+
+if __name__ == &#34;__main__&#34;:
+    args_dict = parse_args()
+    clean_arg_paths(args_dict)
+    
+    slurm_command = return_slurm_command(args_dict)
+    
+    print(&#34;Will output results to {}&#34;.format(args_dict[&#34;output_dir&#34;]))
+    
+    input_file = args_dict[&#34;input_file&#34;]
+    input_accession = args_dict[&#34;SRA_accession&#34;]
+    if input_file is not None:
+        # read from input_file
+        print(&#34;Reading from input file {}&#34;.format(input_file))
+        with open(input_file, &#34;r&#34;) as fp:
+            for line in fp:
+                accession = line.strip()
+                if len(accession) &gt; 0:
+                    make_download_sh(args_dict, slurm_command, accession)
+    elif input_accession is not None: 
+        print(&#34;Downloading accession {}&#34;.format(input_accession))
+        make_download_sh(args_dict, slurm_command, input_accession)
+    else:
+        print(&#34;No SRA Accession or input file specified.&#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="polished_scripts.SRA_download.clean_arg_paths"><code class="name flex">
+<span>def <span class="ident">clean_arg_paths</span></span>(<span>args_dict)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Replaces '.' in paths, modifying input dictionary.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def clean_arg_paths(args_dict):
+    &#34;&#34;&#34;Replaces &#39;.&#39; in paths, modifying input dictionary.&#34;&#34;&#34;
+    # replace path starting with &#34;./&#34; for input file
+    if args_dict[&#34;input_file&#34;] is not None and args_dict[&#34;input_file&#34;].startswith(&#34;.&#34; + os.sep): 
+        args_dict[&#34;input_file&#34;] = os.path.join(os.getcwd(), args_dict[&#34;input_file&#34;][2:])
+    
+    # replaces paths starting with &#34;.&#34; for output directory
+    output_dir = args_dict[&#34;output_dir&#34;]
+    if output_dir is not None:
+        if output_dir.startswith(&#34;.&#34;): 
+            split_output = output_dir.split(os.sep)
+            if len(split_output) &gt; 1:
+                split_output = split_output[1:]
+            split_output = os.sep.join(split_output)
+            args_dict[&#34;output_dir&#34;] = os.path.join(os.getcwd(), split_output)</code></pre>
+</details>
+</dd>
+<dt id="polished_scripts.SRA_download.make_download_sh"><code class="name flex">
+<span>def <span class="ident">make_download_sh</span></span>(<span>args_dict, slurm_command, accession)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Creates and submits to O2 a shell script to download a specific accession, no return value.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def make_download_sh(args_dict, slurm_command, accession):
+    &#34;&#34;&#34;Creates and submits to O2 a shell script to download a specific accession, no return value.&#34;&#34;&#34;
+    output_dir = args_dict[&#34;output_dir&#34;]
+    SHELL_DIR = os.path.join(output_dir, &#34;.sh&#34;)
+    os.makedirs(SHELL_DIR, exist_ok=True)
+    
+    if args_dict[&#34;gzip&#34;] is not None:
+        SHELL_PATH = os.path.join(SHELL_DIR, accession + &#34;_gzip_download.sh&#34;)
+    else:
+        SHELL_PATH = os.path.join(SHELL_DIR, accession + &#34;_download.sh&#34;)
+    
+    primary_command = return_primary_command(args_dict, accession)
+    
+    with open(SHELL_PATH, &#34;w&#34;) as fp:
+        fp.write(slurm_command + primary_command)
+    os.chmod(SHELL_PATH, 0o700)
+    os.system(&#34;sbatch &#34; + SHELL_PATH)</code></pre>
+</details>
+</dd>
+<dt id="polished_scripts.SRA_download.parse_args"><code class="name flex">
+<span>def <span class="ident">parse_args</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Uses argparse to enable user to customize script functionality, returns a dictionary object.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def parse_args():
+    &#34;&#34;&#34;Uses argparse to enable user to customize script functionality, returns a dictionary object.&#34;&#34;&#34;
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    parser.add_argument(&#34;-acc&#34;, &#34;--SRA_accession&#34;, default=None, help=&#34;SRA Accession to download&#34;)
+    parser.add_argument(&#34;-in_file&#34;, &#34;--input_file&#34;, default=None, help=&#34;Files with SRA Accessions to download, one accession per line&#34;)
+    parser.add_argument(&#34;-split&#34;, &#34;--split_mode&#34;, default=&#34;--split-3&#34;, help=&#34;Option to split output files, see `fastq-dump --help` for more options`&#34;)
+    parser.add_argument(&#34;--gzip&#34;, action=&#34;store_true&#34;, help=&#34;Will keep downloaded FASTQ&#39;s gzipped if present&#34;)
+    parser.add_argument(&#34;-out&#34;, &#34;--output_dir&#34;, default=&#34;./&#34;, help=&#34;Optional output directory, default is current directory&#34;)
+    parser.add_argument(&#34;-n&#34;, &#34;--num_cores&#34;, default=&#34;1&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;-t&#34;, &#34;--runtime&#34;, default=&#34;0-5:00:00&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;-p&#34;, &#34;--queue&#34;, default=&#34;park&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mem_per_cpu&#34;, default=&#34;10G&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mail_type&#34;, default=&#34;ALL&#34;, help=&#34;slurm job submission option&#34;)
+    parser.add_argument(&#34;--mail_user&#34;, default=&#34;alon_galor@hms.harvard.edu&#34;, help=&#34;slurm job submission option&#34;)
+    return vars(parser.parse_args())</code></pre>
+</details>
+</dd>
+<dt id="polished_scripts.SRA_download.return_primary_command"><code class="name flex">
+<span>def <span class="ident">return_primary_command</span></span>(<span>args_dict, accession)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns primary command to be executed as string.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def return_primary_command(args_dict, accession):
+    &#34;&#34;&#34;Returns primary command to be executed as string.&#34;&#34;&#34;
+    primary_command = &#34;module load sratoolkit\n&#34; + \
+                    &#34;fastq-dump {}&#34;.format(args_dict[&#34;split_mode&#34;])
+    if args_dict[&#34;output_dir&#34;] is not None:
+        primary_command += &#34; --outdir {}&#34;.format(args_dict[&#34;output_dir&#34;])
+    if args_dict[&#34;gzip&#34;]:
+        primary_command += &#34; --gzip&#34;
+    primary_command += &#34; &#34; + accession
+    return primary_command</code></pre>
+</details>
+</dd>
+<dt id="polished_scripts.SRA_download.return_slurm_command"><code class="name flex">
+<span>def <span class="ident">return_slurm_command</span></span>(<span>args_dict)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Returns slurm command given args_dict provided as string.</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def return_slurm_command(args_dict):
+    &#34;&#34;&#34;Returns slurm command given args_dict provided as string.&#34;&#34;&#34;
+    slurm_command = &#34;#!/bin/bash\n&#34; + \
+                &#34;#SBATCH -n &#34; + args_dict[&#34;num_cores&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH -t &#34; + args_dict[&#34;runtime&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH -p &#34; + args_dict[&#34;queue&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mem-per-cpu=&#34; + args_dict[&#34;mem_per_cpu&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mail-type=&#34; + args_dict[&#34;mail_type&#34;] + &#34;\n&#34; + \
+                &#34;#SBATCH --mail-user=&#34; + args_dict[&#34;mail_user&#34;] + &#34;\n&#34;
+    if args_dict[&#34;queue&#34;] in [&#34;park&#34;, &#34;priopark&#34;]:
+        slurm_command += &#34;#SBATCH --account=park_contrib&#34; + &#34;\n&#34;
+    return slurm_command</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="polished_scripts" href="index.html">polished_scripts</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="polished_scripts.SRA_download.clean_arg_paths" href="#polished_scripts.SRA_download.clean_arg_paths">clean_arg_paths</a></code></li>
+<li><code><a title="polished_scripts.SRA_download.make_download_sh" href="#polished_scripts.SRA_download.make_download_sh">make_download_sh</a></code></li>
+<li><code><a title="polished_scripts.SRA_download.parse_args" href="#polished_scripts.SRA_download.parse_args">parse_args</a></code></li>
+<li><code><a title="polished_scripts.SRA_download.return_primary_command" href="#polished_scripts.SRA_download.return_primary_command">return_primary_command</a></code></li>
+<li><code><a title="polished_scripts.SRA_download.return_slurm_command" href="#polished_scripts.SRA_download.return_slurm_command">return_slurm_command</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.3</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

@@ -3,8 +3,11 @@ Runs HTSeq read counts script.
 
 Utilizes the HTSeq conda environment from `/home/ag457/anaconda3/envs/HTSeq`.
 
-See reference <a href="https://htseq.readthedocs.io/en/release_0.11.1/count.html"><u>here</u></a> 
+See HTSeq developer reference <a href="https://htseq.readthedocs.io/en/release_0.11.1/count.html"><u>here</u></a> 
 for details on options.
+
+See <a href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/#mrna-quantification-command-line-parameters"><u>here</u></a> 
+for suggested TCGA settings.
 """
 
 import os
@@ -75,7 +78,7 @@ def return_primary_command(input_file, output_file, args_dict):
     
 def make_HTSeq_sh(input_dir, output_dir, slurm_command, args_dict):
     """Creates and submits HTSeq scripts."""
-    
+
     scripts_dir = os.path.join(output_dir, ".HTSeq_sh")
     os.makedirs(scripts_dir, exist_ok=True)
     
