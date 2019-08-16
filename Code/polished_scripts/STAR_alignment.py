@@ -42,7 +42,7 @@ def parse_args():
     """Uses argparse to enable user to customize script functionality, returns a dictionary object."""
     
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("-input_dir", "--input_directory", default=None, help="Files with SRA Accessions to download, one accession per line")
+    parser.add_argument("-input_dir", "--input_directory", default=None, help="Folder with fastq's for alignment")
     parser.add_argument("-index_dir", "--index_directory", default="/n/data1/hms/dbmi/park/lawrence/bin/RNA_Seq/STAR_INDEX_GRCh38_GENCODE_annotations/", help="Optional directory with STAR indices, otherwise will use existing")
     parser.add_argument("-out", "--output_directory", default="./", help="Output directory for aligned reads")
     parser.add_argument("-n", "--num_cores", default="16", help="slurm job submission option")
@@ -102,7 +102,7 @@ def run_alignment(slurm_command, input_files, index_dir, output_dir, numThreads)
             with open(script_name, "w+") as fp:
                 fp.write(slurm_command + main_command)
             os.system("chmod u+x " + script_name)
-            os.system("sbatch " + script_name)
+            # os.system("sbatch " + script_name)
 
 if __name__ == "__main__":
     args_dict = parse_args()
@@ -111,6 +111,8 @@ if __name__ == "__main__":
     input_dir = args_dict["input_directory"]
     index_dir = args_dict["index_directory"]
     output_dir = args_dict["output_directory"]
+    
+    print(index_dir)
     
     if input_dir is not None: 
         slurm_command = return_slurm_command(args_dict)

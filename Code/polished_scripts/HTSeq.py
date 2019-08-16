@@ -1,13 +1,14 @@
 """
 <h3>Runs HTSeq read counts script.</h3>
 
-Utilizes the HTSeq conda environment from `/home/ag457/anaconda3/envs/HTSeq`.
+Utilizes the HTSeq conda environment from `/home/ag457/anaconda3/envs/HTSeq`. 
+Check to see if you have replicates before you get to this step, might want to merge at the BAM level instead of dealing with merging the HTSeq counts output.
 
 See HTSeq developer reference <a href="https://htseq.readthedocs.io/en/release_0.11.1/count.html"><u>here</u></a> 
 for details on options.
 
 See <a href="https://docs.gdc.cancer.gov/Data/Bioinformatics_Pipelines/Expression_mRNA_Pipeline/#mrna-quantification-command-line-parameters"><u>here</u></a> 
-for suggested TCGA settings.
+for suggested TCGA settings. The file `/n/data1/hms/dbmi/park/lawrence/reference_data/gencode.v31.annotation.gff3` is required for annotations.
 """
 
 import os
